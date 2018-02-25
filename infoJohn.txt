@@ -1,0 +1,4 @@
+﻿node node_modules\webpack\bin\webpack.js --env.prod
+run from the directory with node_modules
+
+
