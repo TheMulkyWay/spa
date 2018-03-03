@@ -2,3 +2,5 @@
 run from the directory with node_modules
 
 
+https://github.com/aspnet/JavaScriptServices/issues/1248
+https://github.com/SteveSandersonMS

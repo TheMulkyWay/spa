@@ -15,19 +15,28 @@ import { ProfileComponent } from './components/gitprofile/profile.component';
 import { ProductListComponent}  from './components/product/product-list.component'
 import { ProductDetailComponent } from './components/product/product-detail.component'
 import { ProductFilterPipe } from './components/product/product-filter.pipe';
-
+import { CustomersComponent } from './components/customers/customers.component';
+import {PaginationComponent} from './components/shared/pagination/pagination.component';
+import {CapitalizePipe } from './components/shared/pipes/capitalize.pipe';
+import {  TrimPipe } from './components/shared/pipes/trim.pipe';
 
 
 import { TodoService } from './services/todo.service';
 import {GitProfileService } from './services/gitprofile.service';
 import { ProductService } from './services/product.service';
 
+import { FilterTextboxComponent } from './components/shared/filter-textbox/filter-textbox.component';
+import {CustomersGridComponent } from './components/customers/customers-grid.component';
 
 
 @NgModule({
     declarations: [
         AppComponent, TodosComponent,
-        ProfileComponent, ProductListComponent, ProductDetailComponent, ProductFilterPipe,
+        ProfileComponent, ProductListComponent,
+        ProductDetailComponent, ProductFilterPipe,
+        CustomersComponent, FilterTextboxComponent,
+        CustomersGridComponent, PaginationComponent,
+        CapitalizePipe, TrimPipe,
         NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
@@ -46,6 +55,7 @@ import { ProductService } from './services/product.service';
             { path: 'git', component: ProfileComponent },
             { path: 'product', component: ProductListComponent },
             { path: 'product/:id', component: ProductDetailComponent },
+            { path: 'customer', component: CustomersComponent},
             { path: '**', redirectTo: 'home' }
         ]
         )
