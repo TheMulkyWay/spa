@@ -1,0 +1,37 @@
+<h1>Big Hello again!</h1>
+<p>Welcome to my open source Angular and ASP.NET single-page application, built with:</p>
+<ul>
+    <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
+    <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>
+    <li><a href='https://webpack.github.io/'>Webpack</a> for building and bundling client-side resources</li>
+    <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
+    <li><a href='http://getbootstrap.com/'>Visual Studio tooling</a> Community and Code editions.</li>
+</ul>
+<p>Full Stacks demo features here:</p>
+
+
+
+<div (click)="onClickSimple()"
+     (mousedown)="clickInfo='mousedown'"
+     [@clickedState]="clickinfo">
+    Ani zone
+</div>
+<br /><br /><br />
+<p (click)="paragraphClick='clicked'"
+   [@clickedState]="paragraphClick">more text</p>
+<br>
+
+
+
+<br /><br />
+<button (click)="onAddElement()" class="btn-warning">Add New</button>
+<div *ngFor="let testResult of testResults"
+        @listState
+     @itemState
+     class="test-result">{{testResult}}
+ 
+    </div>
+<br /><br />
+<br /><br />
+
+Hosted on <code>Azure</code>    Source Code <code>Github</code>, the free one's.

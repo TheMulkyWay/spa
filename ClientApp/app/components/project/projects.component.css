@@ -1,0 +1,96 @@
+﻿.marked {
+    border: 2px solid blue;
+    animation: marked 0.3s ease-out forwards;
+}
+
+.inactive {
+    border: 1px solid #ccc
+}
+
+.loading-bar {
+    width: 200px;
+    height: 20px;
+    border: solid 1px black;
+    margin: auto;
+    box-sizing: content-box;
+}
+
+.loading-bar-element {
+    width: 0;
+    height: 20px;
+    background-color: deepskyblue;
+    animation: loading 1s ease-out infinite;
+}
+
+@keyframes marked {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.05)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+#div2 {
+    width: 150px;
+    height: 75px;
+    background-color: green; /* 049@4m4s */
+    animation: moved 1s ease-out forwards;
+}
+
+@keyframes moved {
+    0% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(300px) scale(1.2);
+    }
+
+    75% {
+        transform: translateX(400px) scale(1);
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}
+
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+
+.form-control {
+    display: inline-block;
+    width: 50%;
+}
+
+:host :host {
+    display: block;
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: 3px 3px 2px #ccc;
+    margin: 20px 0;
+    padding: 20px
+}
+
+:host(.marked) {
+    padding: 19px;
+}
+
+:host(.inactive) {
+    color: #ccc;
+}

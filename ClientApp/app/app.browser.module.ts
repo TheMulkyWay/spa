@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppModuleShared } from './app.shared.module';
 import { AppComponent } from './components/app/app.component';
-import {HttpModule } from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
     bootstrap: [ AppComponent ],
     imports: [
-        BrowserModule,
+        BrowserModule, BrowserAnimationsModule,
         AppModuleShared,
         HttpModule
     ],

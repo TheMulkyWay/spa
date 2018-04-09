@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-
+// import {trigger, state, style} from '@angular/animations';
 @Component({
     selector: 'app',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
+   
 })
 export class AppComponent {
 }

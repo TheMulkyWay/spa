@@ -8,7 +8,7 @@ using spa.Repository;
 
 namespace spa.Controllers
 {
-     [Route("api/v2/customers")]
+     [Route("api/customers")]
     public class CustomersController : Controller 
     {
         [HttpGet()] /* ▓ GetCustomers ▓ */

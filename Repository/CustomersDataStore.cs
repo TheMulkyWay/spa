@@ -37,7 +37,7 @@ namespace spa.Repository
                    }
                    
                    },
-                 new Customer() {Id=3, FirstName="John", LastName="Mulkearns", Gender="male", Email="hotmail.com",Address="6 Girasol 35014 ", StateId=1,
+                 new Customer() {Id=3, FirstName="John", LastName="Healey-Case", Gender="male", Email="hotmail.com",Address="6 Girasol 35014 ", StateId=1,
                    Orders = new List<IOrder>
                    {
                        new Order{Id=4, Product = "Speakers", Price = 499.99M, Quantity = 1 },

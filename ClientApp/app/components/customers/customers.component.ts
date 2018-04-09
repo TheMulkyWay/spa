@@ -20,17 +20,56 @@ export class CustomersComponent implements OnInit {
 
     totalRecords: number = 0;
     pageSize: number = 10;
-    dataService: DataService;
+    
+
+    constructor(
+        private router: Router,
+        private dataService: DataService,
+        private dataFilter: DataFilterService
+    )    {    }
+
+    
+    getCustomers() {
+
+        this.dataService.getCustomers()
+            .subscribe((customers: ICustomer[]) => {
+                this.customers = this.filteredCustomers = customers;
+            },
+                                                           /*4.7@4m42s*/
+
+            (err: any) => console.log(err),
+            () => console.log('john you just called getCustomers() to retrieve customers'));
+    }
+
+                                                                   /*      need to add the filter array as 4.7@7m16s     */
 
     ngOnInit() {
         this.title = 'Customers';
-       // this.getCustomersPage(1);
+       //  this.getCustomersPage(1);
+        this.getCustomers();
     }
 
     pageChanged(page: number) {
         this.getCustomersPage(page);
     }
-    // calls into the data service which calls into the server side
+
+
+    filterChanged(filterText: string) {
+        if (filterText && this.customers) {
+            let props = ['firstName', 'lastName', 'address', 'city', 'state.name', 'orderTotal'];
+            this.filteredCustomers = this.dataFilter.filter(this.customers, props, filterText);
+        }
+        else {
+            this.filteredCustomers = this.customers;
+        }
+        console.log('changed filter box with ' + filterText);
+    }
+
+
+
+
+
+                                              // calls into the data service which calls into the server side
     getCustomersPage(page: number) {
         this.dataService.getCustomersPage((page - 1) * this.pageSize, this.pageSize)
             .subscribe((response: IPagedResults<ICustomer[]>) => {

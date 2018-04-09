@@ -21,8 +21,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="NodeServicesOptions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ClientApp\app\datajs\products500.json" />
     <Content Include="ClientApp\app\datajs\todos.json" />
     <Content Include="ClientApp\app\datajs\products.json" />
+    <Content Include="ClientApp\app\services\CustomersDan.json" />
+    <Content Include="ClientApp\app\services\products.json" />
+    <Content Include="ClientApp\app\services\StatesDan.json" />
   </ItemGroup>
 
   <ItemGroup>

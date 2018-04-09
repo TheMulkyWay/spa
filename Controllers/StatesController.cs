@@ -8,6 +8,7 @@ using spa.Repository;
 
 namespace spa.Controllers
 {
+     [Route("api/states")]
     public class StatesController : Controller
     {
         [HttpGet()] /* ▓ GetStates ▓ */

@@ -1,0 +1,6 @@
+﻿export interface IProject
+{
+    name: string;
+    description: string;
+    status: string;
+    }

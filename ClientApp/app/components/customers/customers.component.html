@@ -9,8 +9,10 @@
         <br />
         <div class="row">
             <div class="col-md-8">
-                <div class="navbar">
-                    <filter-textbox (changed)="filterChanged($event)"></filter-textbox>
+
+                <div class="navbar"> <!--this is a child component that has a custom event-->
+                <!--    <filter-textbox (changed)="filterChanged($event)"></filter-textbox>-->
+                    <filter-textbox></filter-textbox>
                 </div>
             </div>
             <div class="col-md-4">
@@ -22,7 +24,8 @@
 
         <pagination [totalItems]="totalRecords"
                     [pageSize]="pageSize"
-                    (pageChanged)="pageChanged($event)"></pagination>
+                    (pageChanged)="pageChanged($event)">
+         </pagination>
 
     </div>
 </div>

@@ -1,0 +1,7 @@
+﻿.simple { width:100px; height:30px; background-color:orange;}
+span {display: inline-block;}
+.test-result { margin: 30px 0; border: 1px darkblue solid;
+               padding: 20px;
+               font-size:16px;
+               height: 30px; width:200px;
+               background-color: #c6dcee;}
